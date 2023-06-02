@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import matplotlib.pyplot as plt
+import numpy as np
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+plt.rcdefaults()
 
+fluxo_de_caixa = ('jan-mar', 'abr-jun', 'jul-set', 'out-dez')
+indice = np.arange(len(fluxo_de_caixa))
+acessos = [199300.00, 1370250.00, 40550.00, 15000.00]
+plt.bar(indice, acessos)
+plt.xticks(indice, fluxo_de_caixa)
+plt.ylabel('Acessos')
+plt.title('Ranking do 2022')
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+plt.show()
